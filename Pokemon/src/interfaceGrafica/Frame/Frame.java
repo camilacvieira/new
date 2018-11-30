@@ -22,14 +22,19 @@ public class Frame extends javax.swing.JFrame {
      * Creates new form Frame
      */
     
+    public Frame(Treinador a, Treinador b) {
+        initComponents();
+        Panel2.setVisible(false);
+        mudaTelaInicial(a, b);
+    }
     
     public Frame() {
         initComponents();
         Panel2.setVisible(false);
-        mudaTela();
+        mudaTelaInicial();
     }
     
-    public void mudaTela(){
+    public void mudaTelaInicial(){
         Component []components = Panel1.getComponents();
         for(Component component : components){
             if(component instanceof JButton){
@@ -41,9 +46,57 @@ public class Frame extends javax.swing.JFrame {
                         if(component==iniciarJogo){
                             Panel1.setVisible(false);
                             Panel2.setVisible(true);
+                            //mudaTelaTime();
                         }
                     }
                 } );
+            }
+        }
+    }
+    
+    public void mudaTelaInicial(Treinador a, Treinador b){
+        Component []components = Panel1.getComponents();
+        for(Component component : components){
+            if(component instanceof JButton){
+                System.out.println("Teste");
+                JButton button = (JButton) component;
+                button.addActionListener(new ActionListener(){
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        if(component==iniciarJogo){
+                            Panel1.setVisible(false);
+                            Panel2.setVisible(true);
+                            mudaTelaTime(a, b);
+                        }
+                    }
+                } );
+            }
+        }
+    }
+    
+    public void mudaTelaTime(Treinador a, Treinador b){
+        Component []components = Panel2.getComponents();
+        for(Component component : components ){
+            if(component instanceof JButton){
+                JButton button = (JButton) component;
+                button.addActionListener(new ActionListener(){
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        if(component == Time1){
+                            System.out.println("Teste1");
+                        }
+                        if(component == Time2){
+                            System.out.println("Time2");
+                        }
+                        if(component == Time3){
+                            System.out.println("Time3");
+                        }
+                        if(component == Time4){
+                            System.out.println("Time4");
+                        }
+                    }
+                    
+                });
             }
         }
     }

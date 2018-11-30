@@ -23,7 +23,8 @@ import interfaceGrafica.Frame.Frame;
  * @author Arthur
  */
 public class IniciaJogo {
-            
+
+         int i = 0;
          Pokemon p1;
          Pokemon p2;
          Pokemon p3;
@@ -40,8 +41,14 @@ public class IniciaJogo {
          Time t2;
          Time t3;
          Time t4;
-        
+         Time escolhido1 = new Time();
+         Time escolhido2 = new Time(); 
+         Treinador a;
+         Treinador b;
+
         public IniciaJogo(){
+            a = new Treinador();
+            b = new Treinador();
             p1 = new Pikachu();
             p2 = new Blastoise();
             p3 = new Bulbassauro();
@@ -60,22 +67,27 @@ public class IniciaJogo {
             t4 = new Time(p1,p4,p9);
             java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Frame().setVisible(true);
+                new Frame(a, b).setVisible(true);
             }
             });
-        }    
-            
-        public void escolheTime(){ 
-            
-            Time escolhido1 = new Time();
-            Time escolhido2 = new Time();
-            
+        }
+
+        public void escolheTime(Time t){ 
+            if(i == 0){
+                Time escolhido1 = new Time(); 
+                escolhido1 = t;
+                i++;
+            }
+            else {
+                Time escolhido2 = new Time(); 
+                escolhido2 = t;
+            }
             // botao escolhe o time escohido1 = t1 ou t2 ou t3 ou t4
-           
-            Treinador a = new Treinador(t1);
-            Treinador b = new Treinador(t2);
+
+            Treinador a = new Treinador(escolhido1);
+            Treinador b = new Treinador(escolhido2);
             Batalha bat = new Batalha(a,b);
-            bat.comecarBatalha();           
-		
-	}
+            bat.comecarBatalha();
+
+    }
 }

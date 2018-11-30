@@ -21,11 +21,6 @@ public class Batalha {
         
     }
     
-    public void checadesVantagem(Pokemon p1, Pokemon p2){
-        
-        
-    }
-    
     public void round(Pokemon p1 , Pokemon p2){
         
         

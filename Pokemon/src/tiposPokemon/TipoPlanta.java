@@ -21,10 +21,4 @@ public class TipoPlanta extends Pokemon implements TipoPokemon {
          vantagens[0] = 0; vantagens[1]= 4;
     }
 
-    @Override
-    public void fraquesas() {
-        // 0-Agua ; 1-Eletrico ; 2-Fogo ; 3-Normal ; 4-Pedra ; 5-Planta ; 6-Psiquico
-        fraquesas[0] = 2;
-    }
-    
 }

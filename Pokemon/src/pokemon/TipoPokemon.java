@@ -11,6 +11,5 @@ package pokemon;
  */
 public interface TipoPokemon {
     public void vantagem();
-    public void fraquesas();
             
 }

@@ -19,12 +19,5 @@ public class TipoEletrico extends Pokemon implements TipoPokemon {
          // 0-Agua ; 1-Eletrico ; 2-Fogo ; 3-Normal ; 4-Pedra ; 5-Planta ; 6-Psiquico
          vantagens[0] = 0;
     }
-
-    @Override
-    public void fraquesas() {
-        // 0-Agua ; 1-Eletrico ; 2-Fogo ; 3-Normal ; 4-Pedra ; 5-Planta ; 6-Psiquico
-       // Sem fraquesas.
-       fraquesas = null;
-    }
     
 }

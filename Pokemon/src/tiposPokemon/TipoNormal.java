@@ -21,10 +21,4 @@ public class TipoNormal extends Pokemon implements TipoPokemon {
          vantagens = null;
     }
 
-    @Override
-    public void fraquesas() {
-        // 0-Agua ; 1-Eletrico ; 2-Fogo ; 3-Normal ; 4-Pedra ; 5-Planta ; 6-Psiquico
-        // Sem desvantagens;
-        fraquesas = null;
-    }
 }

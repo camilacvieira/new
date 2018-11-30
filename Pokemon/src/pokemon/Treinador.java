@@ -23,7 +23,7 @@ public class Treinador {
     }
 
     Treinador() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
         
     public void calculaVida(){
@@ -37,6 +37,20 @@ public class Treinador {
     public void setVidaTotal(float vidaTotal) {
         this.vidaTotal = vidaTotal;
     }
-      
+      	
+    public int escolheAtaque(){
+        //qual ataque vc quer utilizar?
+        //cin
+        int choice=-1;
+        System.out.println("Qual ataque vc quer utilizar? 1- 10 de dano 10 mp, 2- 15 de dano e 20 mp, 3- 20 de dano e 30 mp");
+        choice=choice+1;
+        if(choice==0||choice==1||choice==2){
+        return choice;
+        }
+        else{
+            System.out.println("Insira um ataque válido");
+            return -1;
+        }
+    }
     
 }

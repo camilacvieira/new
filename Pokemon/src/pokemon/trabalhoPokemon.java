@@ -34,7 +34,10 @@ class trabalhoPokemon {
             Time t2 = new Time(p12,p6,p7);
             Time t3 = new Time(p3,p8,p2);
             Time t4 = new Time(p1,p4,p9);
-            
+            Treinador A = new Treinador(t1);
+            Treinador B = new Treinador(t2);
+            Batalha Bat = new Batalha(A,B);
+            Bat.comecarBatalha();
             
                    
                             

@@ -22,21 +22,26 @@ public class Batalha {
     }
     
     public void comecarBatalha(){
-        
-        while(t1.getVidaTotal() > 0 &&  t2.getVidaTotal()>0)
+        System.out.println("Vamos começar!");
+        while(t1.getVidaTotal()>0&&t2.getVidaTotal()>0)
         {
             pokemonAtual();
             round(); 
+            System.out.println("p1"+t1.getVidaTotal());
+            System.out.println("p2"+t2.getVidaTotal());
+            System.out.println("p3"+t1.mana);
+            System.out.println("p4"+t2.mana);
+            
         }
-        
-    }
+            System.out.println("Total de vida:"+ "Jogador 1:"+ t1.getVidaTotal()+"Jogador 2: "+t2.getVidaTotal());            
+}
     
     public void pokemonAtual(){
         for(int i = 0 ; i < t1.time.pokemons.size() ; i++){
             if(t1.time.pokemons.get(i).healthPoints > 0){ // Ve se o Pokemon tem vida maior que 0, se não tiver muda para o proximo.
                 p1 = t1.time.pokemons.get(i);
                 break;
-            }    
+            }
         }
         
         for(int i = 0 ; i < t2.time.pokemons.size() ; i++){
@@ -70,10 +75,13 @@ public class Batalha {
     }    
     
     public void round(){
-        checaVantagem();
+//        checaVantagem();
+        System.out.println("Vai treinador 1");
         ataque(1);
+        System.out.println("Vai treinador 2");
         ataque(2);
-        
+        System.out.println("Recuperem 10 de mana");
+        recuperaManaPoints(t1,t2);
     }
     
     public void ataque(int numTreinador){
@@ -87,27 +95,36 @@ public class Batalha {
         float dano = 0;
         
         if(numTreinador == 1){
-            if(p1.manaPoints[choice] >= t1.mana){
+            choice=t1.escolheAtaque();
+            System.out.println(p2.healthPoints);
+            if(p1.manaPoints[choice] <= t1.mana){
                dano = p1.calculaAtaque(choice);
                p2.healthPoints = p2.healthPoints - dano;
                t2.setVidaTotal(t2.getVidaTotal() - dano);
                t1.mana = t1.mana - p1.manaPoints[choice];
+                System.out.println(dano);
             }
-            // Adicionar uma exception para se nao tiver mana suficiente
+            
+            // Adicionar uma exception para se nao tiver mana suficiente 
         }    
         
         else{
-             if(p2.manaPoints[choice] >= t2.mana){
+            choice=t2.escolheAtaque();
+             if(p2.manaPoints[choice] <= t2.mana){
                dano = p2.calculaAtaque(choice);
                p1.healthPoints = p1.healthPoints - dano;
                t1.setVidaTotal(t1.getVidaTotal() - dano);
                t2.mana = t2.mana - p2.manaPoints[choice];
             }
-            // Adicionar uma exception para se nao tiver mana suficiente
-            
+            // Adicionar uma exception para se nao tiver mana suficiente            
         }
              
-    }   
+    }
+    
+    public void recuperaManaPoints(Treinador t1, Treinador t2){
+        t1.mana=t1.mana+10;
+        t2.mana=t2.mana+10;
+    }
       
 }
     

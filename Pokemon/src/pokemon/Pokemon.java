@@ -13,6 +13,8 @@ public class Pokemon {
 	public float healthPoints;
 	public float danoAtual = 100;
         public float dano;
+
+  
        
         // 0-Agua ; 1-Eletrico ; 2-Fogo ; 3-Normal ; 4-Pedra ; 5-Planta ; 6-Psiquico
         public int[] vantagens; 
@@ -23,6 +25,8 @@ public class Pokemon {
             dano = dano * multiHabilidades[index];
             return dano;
         }
+        
+
 
 
 }

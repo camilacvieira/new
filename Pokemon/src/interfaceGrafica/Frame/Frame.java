@@ -5,6 +5,12 @@
  */
 package interfaceGrafica.Frame;
 
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import pokemon.Treinador;
+
 
 /**
  *
@@ -15,10 +21,33 @@ public class Frame extends javax.swing.JFrame {
     /**
      * Creates new form Frame
      */
+    
+    
     public Frame() {
         initComponents();
+        Panel2.setVisible(false);
+        mudaTela();
     }
-
+    
+    public void mudaTela(){
+        Component []components = Panel1.getComponents();
+        for(Component component : components){
+            if(component instanceof JButton){
+                System.out.println("Teste");
+                JButton button = (JButton) component;
+                button.addActionListener(new ActionListener(){
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        if(component==iniciarJogo){
+                            Panel1.setVisible(false);
+                            Panel2.setVisible(true);
+                        }
+                    }
+                } );
+            }
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,7 +57,13 @@ public class Frame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        Panel2 = new javax.swing.JPanel();
+        Time1 = new javax.swing.JButton();
+        Time2 = new javax.swing.JButton();
+        Time3 = new javax.swing.JButton();
+        Time4 = new javax.swing.JButton();
+        escolherTime = new javax.swing.JLabel();
+        Panel1 = new javax.swing.JPanel();
         iniciarJogo = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -37,21 +72,55 @@ public class Frame extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jPanel1.setLayout(null);
+        Panel2.setLayout(null);
+
+        Time1.setBorderPainted(false);
+        Time1.setContentAreaFilled(false);
+        Time1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Panel2.add(Time1);
+        Time1.setBounds(141, 240, 280, 55);
+
+        Time2.setBorderPainted(false);
+        Time2.setContentAreaFilled(false);
+        Time2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Panel2.add(Time2);
+        Time2.setBounds(860, 240, 280, 55);
+
+        Time3.setBorderPainted(false);
+        Time3.setContentAreaFilled(false);
+        Time3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Panel2.add(Time3);
+        Time3.setBounds(142, 613, 280, 55);
+
+        Time4.setBorderPainted(false);
+        Time4.setContentAreaFilled(false);
+        Time4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Panel2.add(Time4);
+        Time4.setBounds(865, 617, 280, 55);
+
+        escolherTime.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfaceGrafica/images/TelaEscolhaPersonagem_1.png"))); // NOI18N
+        escolherTime.setText("jLabel2");
+        Panel2.add(escolherTime);
+        escolherTime.setBounds(0, 0, 1280, 720);
+
+        getContentPane().add(Panel2);
+        Panel2.setBounds(0, 0, 1280, 720);
+
+        Panel1.setLayout(null);
 
         iniciarJogo.setBorderPainted(false);
         iniciarJogo.setContentAreaFilled(false);
         iniciarJogo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(iniciarJogo);
+        Panel1.add(iniciarJogo);
         iniciarJogo.setBounds(420, 260, 480, 120);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfaceGrafica/images/TelaInicial.png"))); // NOI18N
         jLabel1.setText("Teste");
-        jPanel1.add(jLabel1);
+        Panel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 1270, 710);
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1270, 720);
+        getContentPane().add(Panel1);
+        Panel1.setBounds(0, 0, 1270, 720);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -62,8 +131,14 @@ public class Frame extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Panel1;
+    private javax.swing.JPanel Panel2;
+    private javax.swing.JButton Time1;
+    private javax.swing.JButton Time2;
+    private javax.swing.JButton Time3;
+    private javax.swing.JButton Time4;
+    private javax.swing.JLabel escolherTime;
     private javax.swing.JButton iniciarJogo;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

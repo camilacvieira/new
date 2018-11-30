@@ -12,16 +12,12 @@ import interfaceGrafica.Frame.Frame;
  */
 public class Jogo {
     
-    public Treinador t1;
-    public Treinador t2;
+    public Treinador []treinadores;
     
     
     
     public Jogo(){
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Frame().setVisible(true);
-            }
-        });
+        
+        
     }
 }

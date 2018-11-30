@@ -93,7 +93,7 @@ public class Batalha {
      *determina quem vai atacar no round da batalhha
      */
     public void round(){
-        checaVantagem();
+        //checaVantagem();
         System.out.println("Vai treinador 1: ");
         ataque(1);
         System.out.println("Vai treinador 2: ");

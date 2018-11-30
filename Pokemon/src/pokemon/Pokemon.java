@@ -60,7 +60,7 @@ public class Pokemon {
     /**
      *vetor de vantanges contra outros tipos
      */
-    public int[] vantagens; 
+        public int[] vantagens; 
 
    
         
@@ -74,4 +74,8 @@ public class Pokemon {
             dano = dano * multiHabilidades[index];
             return dano;
         }
+        
+
+
+
 }

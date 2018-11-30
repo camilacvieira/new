@@ -21,7 +21,7 @@ class trabalhoPokemon {
 	public static void main(String[] args) {
             
             
-            Jogo jogo = new Jogo();
+            IniciaJogo jogo = new IniciaJogo();
             
             /*
             Pokemon p1 = new Pikachu();

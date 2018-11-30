@@ -67,22 +67,19 @@ public class Treinador {
      * @return
      */
     public int escolheAtaque(){
+        //qual ataque vc quer utilizar?
+        //cin
         int choice=-1;
         Scanner reader = new Scanner(System.in);  // Reading from System.in
         System.out.println("Qual ataque vc quer utilizar? 1- 75mp, 2- 50mp, 3- 25mp, 4-Passar a vez");
         int ler = reader.nextInt();
         choice=choice+ler;
         if(choice==0||choice==1||choice==2||choice==3){
-            return choice;
+        return choice;
         }
         else{
-            while(choice!=0&&choice!=1&&choice!=2&&choice!=3){
-                choice=-1;
-                System.out.println("Insira um ataque válido: 1- 75mp, 2- 50mp, 3- 25mp, 4-Passar a vez");
-                ler = reader.nextInt();
-                choice=choice+ler;
-            }
-            return choice;
+            System.out.println("Insira um ataque válido");
+            return -1;
         }
     }
     

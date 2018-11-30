@@ -17,6 +17,7 @@ import classesPokemons.Onix;
 import classesPokemons.Squirtle;
 import classesPokemons.Venossauro;
 import classesPokemons.Vaporeon;
+import interfaceGrafica.Frame.Frame;
 /**
  *
  * @author Arthur
@@ -57,6 +58,11 @@ public class IniciaJogo {
             t2 = new Time(p12,p6,p7);
             t3 = new Time(p3,p8,p2);
             t4 = new Time(p1,p4,p9);
+            java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Frame().setVisible(true);
+            }
+            });
         }    
             
         public void escolheTime(){ 

@@ -16,6 +16,7 @@ public class Meowth extends TipoNormal {
 
     public Meowth() {
         nome = "Meowth";
+           this.healthPoints =100;
         nomeTipo="Normal";
           tipo = 3;   // 0-Agua ; 1-Eletrico ; 2-Fogo ; 3-Normal ; 4-Pedra ; 5-Planta ; 6-Psiquico
         //habilidades[0] = ""; habilidades[1] = ""; habilidades[2] = "";

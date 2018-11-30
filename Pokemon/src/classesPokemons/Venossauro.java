@@ -15,7 +15,15 @@ import tiposPokemon.TipoPlanta;
 public class Venossauro extends TipoPlanta {
 
     public Venossauro() {
-        nome = "Pikachu";
+        nome = "Venossauro";
+        nomeTipo="Planta";
+        this.healthPoints =150;
+        tipo = 5;   // 0-Agua ; 1-Eletrico ; 2-Fogo ; 3-Normal ; 4-Pedra ; 5-Planta ; 6-Psiquico
+        //habilidades[0] = ""; habilidades[1] = ""; habilidades[2] = "";
+        habilidades[0] ="VineWhip";
+        habilidades[1]="FrenzyPlant";
+        habilidades[2]="RazorLeaf";
+
         
     }
     

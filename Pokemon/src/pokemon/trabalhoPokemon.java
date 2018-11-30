@@ -8,6 +8,7 @@ import classesPokemons.Flareon;
 import classesPokemons.Gyrados;
 import classesPokemons.Jolteon;
 import classesPokemons.Meowth;
+import classesPokemons.Onix;
 import classesPokemons.Squirtle;
 import classesPokemons.Venossauro;
 import classesPokemons.Vaporeon;
@@ -26,7 +27,7 @@ class trabalhoPokemon {
             Pokemon p6 = new Flareon();
             Pokemon p7 = new Gyrados();
             Pokemon p8 = new Jolteon();
-            Pokemon p9 = new Meowth();
+            Pokemon p9 = new Onix();
             Pokemon p10 = new Venossauro();
             Pokemon p11 = new Vaporeon();
             Pokemon p12 = new Squirtle();
@@ -34,6 +35,11 @@ class trabalhoPokemon {
             Time t2 = new Time(p12,p6,p7);
             Time t3 = new Time(p3,p8,p2);
             Time t4 = new Time(p1,p4,p9);
+            Time escolhido1 = new Time();
+            Time escolhido2 = new Time();
+            
+            // botao escolhe o time escohido1 = t1 ou t2 ou t3 ou t4
+           
             Treinador A = new Treinador(t1);
             Treinador B = new Treinador(t2);
             Batalha Bat = new Batalha(A,B);

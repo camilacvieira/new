@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package pokemon;
-
 /**
  *
  * @author ice
@@ -27,13 +26,13 @@ public class Batalha {
         {
             pokemonAtual();
             round(); 
-            System.out.println("p1"+t1.getVidaTotal());
-            System.out.println("p2"+t2.getVidaTotal());
-            System.out.println("p3"+t1.mana);
-            System.out.println("p4"+t2.mana);
+            //System.out.println("t1 vida "+t1.getVidaTotal());
+            //System.out.println("t2 vida "+t2.getVidaTotal());
+            //System.out.println("t1 mana "+t1.mana);
+            //System.out.println("t2 mana "+t2.mana);
             
         }
-            System.out.println("Total de vida:"+ "Jogador 1:"+ t1.getVidaTotal()+"Jogador 2: "+t2.getVidaTotal());            
+            System.out.println("Total de vida: "+ "Jogador 1: "+ t1.getVidaTotal()+"Jogador 2: "+t2.getVidaTotal());            
 }
     
     public void pokemonAtual(){
@@ -42,13 +41,15 @@ public class Batalha {
                 p1 = t1.time.pokemons.get(i);
                 break;
             }
+                           System.out.println("O Pokemon"+i+" morreu!, próximo");
         }
         
         for(int i = 0 ; i < t2.time.pokemons.size() ; i++){
             if(t2.time.pokemons.get(i).healthPoints > 0){ // Ve se o Pokemon tem vida maior que 0, se não tiver muda para o proximo.
                 p2 = t2.time.pokemons.get(i);
                 break;
-            }    
+            }
+            System.out.println("O Pokemon"+i+"morreu!, próximo");
         }
         
     }
@@ -96,25 +97,27 @@ public class Batalha {
         
         if(numTreinador == 1){
             choice=t1.escolheAtaque();
-            System.out.println(p2.healthPoints);
+            System.out.println("1Vida do pokemon: "+p2.healthPoints);
             if(p1.manaPoints[choice] <= t1.mana){
                dano = p1.calculaAtaque(choice);
                p2.healthPoints = p2.healthPoints - dano;
                t2.setVidaTotal(t2.getVidaTotal() - dano);
                t1.mana = t1.mana - p1.manaPoints[choice];
-                System.out.println(dano);
+                System.out.println("1Dano feito: "+dano);
             }
             
-            // Adicionar uma exception para se nao tiver mana suficiente 
+            // Adicionar uma exception para se nao tiver mana suficiente
         }    
         
         else{
             choice=t2.escolheAtaque();
+            System.out.println("2Vida do pokemon: "+p2.healthPoints);
              if(p2.manaPoints[choice] <= t2.mana){
                dano = p2.calculaAtaque(choice);
                p1.healthPoints = p1.healthPoints - dano;
                t1.setVidaTotal(t1.getVidaTotal() - dano);
                t2.mana = t2.mana - p2.manaPoints[choice];
+               System.out.println("1Dano feito: "+dano);
             }
             // Adicionar uma exception para se nao tiver mana suficiente            
         }

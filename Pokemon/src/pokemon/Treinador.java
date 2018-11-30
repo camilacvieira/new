@@ -7,6 +7,7 @@ package pokemon;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -42,8 +43,10 @@ public class Treinador {
         //qual ataque vc quer utilizar?
         //cin
         int choice=-1;
+        Scanner reader = new Scanner(System.in);  // Reading from System.in
         System.out.println("Qual ataque vc quer utilizar? 1- 10 de dano 10 mp, 2- 15 de dano e 20 mp, 3- 20 de dano e 30 mp");
-        choice=choice+1;
+        int ler = reader.nextInt();
+        choice=choice+ler;
         if(choice==0||choice==1||choice==2){
         return choice;
         }

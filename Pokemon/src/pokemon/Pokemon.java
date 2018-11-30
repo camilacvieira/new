@@ -11,7 +11,7 @@ public class Pokemon {
         public float[] multiHabilidades = {2,1.5f,1};
 	public int[] manaPoints = {75,50,25};
 	public float healthPoints;
-	public float danoAtual = 100;
+	public float danoAtual = 10;
         public float dano;
 
   

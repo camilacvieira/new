@@ -8,8 +8,8 @@ public class Pokemon {
 	public String nomeTipo;
         public int tipo; // 0-Agua ; 1-Eletrico ; 2-Fogo ; 3-Normal ; 4-Pedra ; 5-Planta ; 6-Psiquico
 	public String[] habilidades = new String[3];
-        public float[] multiHabilidades = {2,1.5f,1};
-	public int[] manaPoints = {75,50,25};
+        public float[] multiHabilidades = {2,1.5f,1,0};
+	public int[] manaPoints = {75,50,25,0};
 	public float healthPoints;
 	public float danoAtual = 10;
         public float dano;

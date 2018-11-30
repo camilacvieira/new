@@ -76,15 +76,15 @@ public class Batalha {
     }    
     
     public void round(){
-//        checaVantagem();
-        System.out.println("Vai treinador 1");
+        //checaVantagem();
+        System.out.println("Vai treinador 1: ");
         ataque(1);
-        System.out.println("Vai treinador 2");
+        System.out.println("Vai treinador 2: ");
         ataque(2);
-        System.out.println("Recuperem 10 de mana");
+        System.out.println("Treinadores recuperem 10 de mana!");
         recuperaManaPoints(t1,t2);
     }
-    
+     
     public void ataque(int numTreinador){
         // Ter os botoes com as habilidadades
         // Selecionar o que apertar
@@ -97,32 +97,34 @@ public class Batalha {
         
         if(numTreinador == 1){
             choice=t1.escolheAtaque();
-            System.out.println("1Vida do pokemon: "+p2.healthPoints);
+            System.out.println("Vida do pokemon: "+p2.healthPoints);
             if(p1.manaPoints[choice] <= t1.mana){
                dano = p1.calculaAtaque(choice);
                p2.healthPoints = p2.healthPoints - dano;
                t2.setVidaTotal(t2.getVidaTotal() - dano);
                t1.mana = t1.mana - p1.manaPoints[choice];
-                System.out.println("1Dano feito: "+dano);
-                System.out.println("1Vida pos ataque do pokemon: "+p2.healthPoints);
+               System.out.println("Dano feito: "+dano);
+               System.out.println("Vida pos ataque do pokemon: "+p2.healthPoints);
             }
             else{
-                 System.out.println("Mana insuficiente,vc tem "+t1.mana+"pontos de mana, jogue novamente!");
-                 choice=t1.escolheAtaque();
-                 
+                 while(p2.manaPoints[choice]>t2.mana){
+                     System.out.println("Mana insuficiente,vc tem "+t2.mana+"pontos de mana Jogue novamente");
+                     choice=t2.escolheAtaque();
+                 }
              }
         }    
         
         else{
             choice=t2.escolheAtaque();
-            System.out.println("2Vida do pokemon: "+p2.healthPoints);
+            System.out.println("Vida do pokemon: "+p2.healthPoints);
              if(p2.manaPoints[choice] <= t2.mana){
                dano = p2.calculaAtaque(choice);
                p1.healthPoints = p1.healthPoints - dano;
                t1.setVidaTotal(t1.getVidaTotal() - dano);
                t2.mana = t2.mana - p2.manaPoints[choice];
-               System.out.println("1Dano feito: "+dano);
-               System.out.println("2Vida pos ataque do pokemon: "+p2.healthPoints);
+               System.out.println("Dano feito: "+dano);
+               System.out.println("Mana Restante:");
+               System.out.println("Vida pos ataque do pokemon: "+p2.healthPoints);
             }
              else{
                  while(p2.manaPoints[choice]>t2.mana){

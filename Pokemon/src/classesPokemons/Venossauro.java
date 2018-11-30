@@ -9,7 +9,7 @@ import tiposPokemon.TipoPlanta;
  */
 
 /**
- *
+ *Pokemon tipo planta 100hp
  * @author Arthur
  */
 public class Venossauro extends TipoPlanta {

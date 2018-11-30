@@ -9,11 +9,16 @@ import tiposPokemon.TipoNormal;
  */
 
 /**
- *
+ *Pokemon
+ * tipo normal 
+ * 100 hp
  * @author Arthur
  */
 public class Meowth extends TipoNormal {
 
+    /**
+     * 
+     */
     public Meowth() {
         nome = "Meowth";
            this.healthPoints =100;

@@ -6,7 +6,7 @@
 package pokemon;
 
 /**
- *
+ *interface para vantagem dos pokemons
  * @author Arthur
  */
 public interface TipoPokemon {

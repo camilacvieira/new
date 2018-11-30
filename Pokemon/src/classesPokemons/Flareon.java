@@ -9,7 +9,7 @@ import tiposPokemon.TipoFogo;
  */
 
 /**
- *
+ *Pokemon tipo fogo 120hp
  * @author Arthur
  */
 public class Flareon extends TipoFogo {

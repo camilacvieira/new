@@ -38,6 +38,8 @@ class trabalhoPokemon {
             Time escolhido1 = new Time();
             Time escolhido2 = new Time();
             
+          
+            
             // botao escolhe o time escohido1 = t1 ou t2 ou t3 ou t4
            
             Treinador A = new Treinador(t1);

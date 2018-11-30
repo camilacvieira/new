@@ -8,7 +8,7 @@ package pokemon;
 import java.util.ArrayList;
 
 /**
- *
+ *classe  que determina os pokemons do time
  * @author Arthur
  */
 public class Time {

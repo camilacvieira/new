@@ -9,7 +9,9 @@ import tiposPokemon.TipoPsiquico;
  */
 
 /**
- *
+ *  Pokemon
+ * tipo Psiquico
+ * 150 hp
  * @author Arthur
  */
 public class Mewtwo extends TipoPsiquico {

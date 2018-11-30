@@ -9,7 +9,7 @@ import tiposPokemon.TipoEletrico;
  */
 
 /**
- *
+ *Pokemon tipo eletrico 150hp
  * @author Arthur
  */
 public class Raichu extends TipoEletrico {

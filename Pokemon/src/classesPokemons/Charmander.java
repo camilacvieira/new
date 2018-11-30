@@ -9,11 +9,15 @@ import tiposPokemon.TipoFogo;
  */
 
 /**
- *
+ *Pokemon tipo fogo 100hp
  * @author Arthur
  */
 public class Charmander extends TipoFogo {
 
+    /**
+     *
+     * 
+     */
     public Charmander() {
         nome = "Charmander";
            this.healthPoints =100;

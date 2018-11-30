@@ -9,7 +9,9 @@ import tiposPokemon.TipoPedra;
  */
 
 /**
- *
+ *Pokemon
+ * tipo pedra
+ * 120 de hp
  * @author Arthur
  */
 public class Onix extends TipoPedra {

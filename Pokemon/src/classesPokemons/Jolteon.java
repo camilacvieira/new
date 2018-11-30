@@ -9,11 +9,14 @@ import tiposPokemon.TipoEletrico;
  */
 
 /**
- *
+ *Pokemon tipo eletrico 100hp
  * @author Arthur
  */
 public class Jolteon extends TipoEletrico {
 
+    /**
+     *  
+     */
     public Jolteon() {
       nome = "Jolteon";
           this.healthPoints =100;

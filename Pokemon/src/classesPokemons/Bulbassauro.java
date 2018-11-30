@@ -9,11 +9,15 @@ import tiposPokemon.TipoPlanta;
  */
 
 /**
- *
+ *Pokemon tipo planta 100hp
  * @author Arthur
  */
 public class Bulbassauro extends TipoPlanta {
 
+    /**
+      *
+      * Pokemon
+     */
     public Bulbassauro() {
         nome = "Bulbassauro";
            this.healthPoints =100;

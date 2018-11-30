@@ -9,7 +9,7 @@ import tiposPokemon.TipoAgua;
  */
 
 /**
- *
+ *Pokemon tipo agua 120hp
  * @author Arthur
  */
 public class Vaporeon extends TipoAgua {

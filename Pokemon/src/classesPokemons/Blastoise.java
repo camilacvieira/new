@@ -9,11 +9,14 @@ import tiposPokemon.TipoAgua;
  */
 
 /**
- *
- * @author Arthur
+ *Pokemon tipo agua 150hp
+ * @author joao
  */
 public class Blastoise extends TipoAgua {
 
+    /**
+     *
+     */
     public Blastoise() {
        
         nome = "Blastoise";

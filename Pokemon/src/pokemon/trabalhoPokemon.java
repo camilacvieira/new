@@ -11,6 +11,7 @@ import classesPokemons.Onix;
 import classesPokemons.Squirtle;
 import classesPokemons.Venossauro;
 import classesPokemons.Vaporeon;
+import interfaceGrafica.Frame.Frame;
         
         
                 
@@ -18,6 +19,11 @@ import classesPokemons.Vaporeon;
         
 class trabalhoPokemon {
 	public static void main(String[] args) {
+            
+            
+            Jogo jogo = new Jogo();
+            
+            /*
             Pokemon p1 = new Pikachu();
             Pokemon p2 = new Blastoise();
             Pokemon p3 = new Bulbassauro();
@@ -44,7 +50,7 @@ class trabalhoPokemon {
             Treinador A = new Treinador(t1);
             Treinador B = new Treinador(t2);
             Batalha Bat = new Batalha(A,B);
-            Bat.comecarBatalha();
+            Bat.comecarBatalha();*/
             
                    
                             

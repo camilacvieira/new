@@ -44,10 +44,10 @@ public class Treinador {
         //cin
         int choice=-1;
         Scanner reader = new Scanner(System.in);  // Reading from System.in
-        System.out.println("Qual ataque vc quer utilizar? 1- 10 de dano 10 mp, 2- 15 de dano e 20 mp, 3- 20 de dano e 30 mp");
+        System.out.println("Qual ataque vc quer utilizar? 1- 10 de dano 10 mp, 2- 15 de dano e 20 mp, 3- 20 de dano e 30 mp, 4-Passar a vez");
         int ler = reader.nextInt();
         choice=choice+ler;
-        if(choice==0||choice==1||choice==2){
+        if(choice==0||choice==1||choice==2||choice==3){
         return choice;
         }
         else{

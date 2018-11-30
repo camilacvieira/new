@@ -14,16 +14,29 @@ import java.util.List;
  */
 public class Treinador {
     private float vidaTotal;    
-    private Time t = new Time();
+    public Time time = new Time();
+    public int mana = 100;
 	
-	public Treinador(Time t) {
-            this.t = t;
-            vidaTotal = t.pokemons.get(0).healthPoints + t.pokemons.get(1).healthPoints + t.pokemons.get(2).healthPoints;
-	}
+    public Treinador(Time t) {
+        this.time = t;
+        vidaTotal = t.pokemons.get(0).healthPoints + t.pokemons.get(1).healthPoints + t.pokemons.get(2).healthPoints;
+    }
+
+    Treinador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
         
-        public void calculaVida(){
-            vidaTotal = t.pokemons.get(0).healthPoints + t.pokemons.get(1).healthPoints + t.pokemons.get(2).healthPoints;
-        }
-	
+    public void calculaVida(){
+        vidaTotal = time.pokemons.get(0).healthPoints + time.pokemons.get(1).healthPoints + time.pokemons.get(2).healthPoints;
+    }
+
+    public float getVidaTotal() {
+        return vidaTotal;
+    }
+
+    public void setVidaTotal(float vidaTotal) {
+        this.vidaTotal = vidaTotal;
+    }
+      
     
 }

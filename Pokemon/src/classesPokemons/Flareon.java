@@ -16,7 +16,7 @@ public class Flareon extends TipoFogo {
 
     public Flareon() {
            nome = "Flareon";
-        this.healthPoints =100;
+        this.healthPoints =120;
              nomeTipo="Fogo";
           tipo = 2;   // 0-Agua ; 1-Eletrico ; 2-Fogo ; 3-Normal ; 4-Pedra ; 5-Planta ; 6-Psiquico
         //habilidades[0] = ""; habilidades[1] = ""; habilidades[2] = "";

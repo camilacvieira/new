@@ -73,7 +73,7 @@ public class Batalha {
         boolean flag = false;
         for(int i=0; i<p1.vantagens.length ; i++){
             if(p1.vantagens[i] == p2.tipo){
-                p1.danoAtual = p1.danoAtual* (1.1f);
+                p1.danoAtual = p1.danoAtual* (1.5f);
                 flag = true;
                 break;
             }
@@ -82,7 +82,7 @@ public class Batalha {
         if(flag == false){
             for(int i=0; i<p2.vantagens.length ; i++){
                if(p2.vantagens[i] == p1.tipo){
-                    p1.danoAtual = p1.danoAtual* (1.1f);
+                    p1.danoAtual = p1.danoAtual* (1.5f);
                     break;
                 }
            }

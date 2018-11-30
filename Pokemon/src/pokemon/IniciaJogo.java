@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package pokemon;
 import classesPokemons.Pikachu;
 import classesPokemons.Blastoise;
@@ -7,17 +12,18 @@ import classesPokemons.Charmander;
 import classesPokemons.Flareon;
 import classesPokemons.Gyrados;
 import classesPokemons.Jolteon;
+import classesPokemons.Meowth;
 import classesPokemons.Onix;
 import classesPokemons.Squirtle;
 import classesPokemons.Venossauro;
 import classesPokemons.Vaporeon;
-        
-        
-                
-
-        
-class trabalhoPokemon {
-	public static void main(String[] args) {
+/**
+ *
+ * @author Arthur
+ */
+public class IniciaJogo {
+            
+        public IniciaJogo(){
             Pokemon p1 = new Pikachu();
             Pokemon p2 = new Blastoise();
             Pokemon p3 = new Bulbassauro();
@@ -34,20 +40,19 @@ class trabalhoPokemon {
             Time t2 = new Time(p12,p6,p7);
             Time t3 = new Time(p3,p8,p2);
             Time t4 = new Time(p1,p4,p9);
+        }    
+            
+        public void escolheTime(){ 
+            
             Time escolhido1 = new Time();
             Time escolhido2 = new Time();
-       
-          
             
             // botao escolhe o time escohido1 = t1 ou t2 ou t3 ou t4
            
             Treinador A = new Treinador(t1);
             Treinador B = new Treinador(t2);
             Batalha Bat = new Batalha(A,B);
-            Bat.comecarBatalha();
-            
-                   
-                            
+                       
 		
 	}
 }
